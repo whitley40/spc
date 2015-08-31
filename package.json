@@ -1,0 +1,36 @@
+{
+  "name": "spc",
+  "version": "1.0.0",
+  "description": "Basic front end build for SPC.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whitley40/spc.git"
+  },
+  "keywords": [
+    "performance",
+    "consulting"
+  ],
+  "author": "Mark Whitley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/whitley40/spc/issues"
+  },
+  "homepage": "https://github.com/whitley40/spc#readme",
+  "devDependencies": {
+    "browser-sync": "^2.8.2",
+    "del": "^1.2.1",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-minify-css": "^1.2.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.2.0"
+  }
+}
