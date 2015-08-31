@@ -1,9 +1,13 @@
 //main style sheet
+html {
+	height: 100%;
+}
 
 body {
 	background: $spc-white;
 	color: $spc-darkblue;
 	font-family:$font-light;
+	height: 100%;
 }
 
 body * {
@@ -57,12 +61,6 @@ a {
 }
 
 //General Layout Settings
-
-.container {
-	width: 100%;
-	margin: auto;
-	max-width: 1000px;
-}
 
 section {
 	padding: 60px 0px;
