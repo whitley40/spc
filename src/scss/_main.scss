@@ -1,5 +1,105 @@
 //main style sheet
 
 body {
-	
+	background: $spc-white;
+	color: $spc-darkblue;
+	font-family:$font-light;
+}
+
+body * {
+	transition: all 0.2s ease-in;
+}
+
+.hidden {
+	display: none;
+}
+
+//main font use
+::selection {
+	background: $spc-lightblue;
+	color: #fff; 
+
+}
+p {
+	font-family:$font-light;
+	font-size: 18px;
+	color: $spc-darkblue;
+	line-height: 24px;
+	margin: 10px 0px 10px;
+	small {
+		font-size: 12px;
+	}
+}
+
+h1 {
+	font-family: $font-heavy;
+	font-size: 50px;
+	color: $spc-darkblue;
+	line-height: 60px;
+	margin: 10px 0px 10px;
+}
+
+h2  {
+	font-family: $font-heavy;
+	font-size: 35px;
+	color: $spc-darkblue;
+	line-height: 45px;
+	margin: 10px 0px 10px;
+}
+a {
+	color: $spc-darkblue;
+	text-decoration: none;
+	&:hover{
+		color: $spc-red;
+
+	}
+
+}
+
+//General Layout Settings
+
+.container {
+	width: 100%;
+	margin: auto;
+	max-width: 1000px;
+}
+
+section {
+	padding: 60px 0px;
+	&.contact-bar{
+		padding: 20px 0px;
+	}
+}
+
+.section-blue {
+	background: $spc-darkblue;
+	p,a,h1,h2{
+	color: $spc-white;
+	}
+}
+
+//contact bar
+
+.nav-social {
+	a{
+		font-family: spc-icons;
+		&:hover {
+			color: $spc-red;
+		}
+		span {
+			display: none;
+		}	
+	}
+	.tw:after{
+		content: 't';
+	}
+	.fb:after{
+		content: 'f';
+	}
+	.vm:after{
+		content: 'v';
+	}
+	.yt:after{
+		content: 'y';
+	}
 }

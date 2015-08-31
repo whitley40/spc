@@ -1,0 +1,53 @@
+//homepage styling
+
+.mobile-menu {
+	display: block;
+	cursor: pointer;
+	position: absolute;
+	right: 15px;
+	top: 15px;
+	font-size: 40px;
+	font-family: spc-icons;
+	&:hover{
+		color: $spc-red;
+	}
+	&:after{
+		content: 'm';
+	}
+	span{
+		display: none;
+	}
+}
+
+.nav-bar,.nav-bar .nav-social, .nav-bar .nav-social ul, .nav-main {
+	display: flex;
+	flex-direction: column;
+}
+
+.nav-bar{
+	margin-top: 50px;
+	.nav-social {
+		border-top: 1px solid $spc-grey;
+		border-bottom: 1px solid $spc-grey;
+		ul{
+			align-self: center;
+			flex-direction: row;
+
+		}
+		a{
+			display: block;
+			padding: 20px;
+		}
+	}
+}
+
+.nav-main a {
+	display: block;
+	padding: 20px;
+	text-align: center;
+	border-bottom: 1px solid $spc-grey;
+	&:hover {
+		background: lighten($spc-grey, 8%);
+	}
+}
+
