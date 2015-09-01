@@ -29,7 +29,7 @@ p {
 	font-size: 18px;
 	color: $spc-darkblue;
 	line-height: 24px;
-	margin: 10px 0px 10px;
+	margin: 0px 0px 40px;
 	small {
 		font-size: 12px;
 	}
@@ -48,7 +48,7 @@ h2  {
 	font-size: 35px;
 	color: $spc-darkblue;
 	line-height: 45px;
-	margin: 10px 0px 10px;
+	margin: 30px 0px 30px;
 }
 a {
 	color: $spc-darkblue;
@@ -63,10 +63,10 @@ a {
 //General Layout Settings
 
 section {
-	padding: 60px 0px;
-	&.contact-bar{
-		padding: 20px 0px;
-	}
+	display: flex;
+	flex-direction: column;
+	padding: 60px 20px;
+	text-align: center;
 }
 
 .section-blue {
@@ -75,6 +75,17 @@ section {
 	color: $spc-white;
 	}
 }
+
+//portal images
+
+.portal {
+	border-radius: 50%;
+	width: 195px;
+	height: 195px;
+	align-self: center;
+}
+
+
 
 //contact bar
 
@@ -99,5 +110,45 @@ section {
 	}
 	.yt:after{
 		content: 'y';
+	}
+}
+
+//contact bar 
+
+.contact-bar {
+	display: flex;
+	flex-direction: column;
+	padding:20px 20px;
+	a.link-icon{
+		display: flex;
+		flex-direction: row;
+		padding: 4px 0px 4px;
+		span{
+			color: $spc-red;
+			padding-right: 10px;
+		}
+	}
+	.nav-social ul{
+		display: flex;
+		flex-direction: row;
+		align-self: center;
+		width: auto;
+		a{
+			display: block;
+			padding: 10px 10px 0px 0px;
+		}
+	}
+
+}
+
+//footer 
+
+footer {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	padding: 20px 0px;
+	p{
+		margin: 0px;
 	}
 }
