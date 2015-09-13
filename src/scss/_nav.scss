@@ -1,0 +1,80 @@
+//mobile menu controller
+
+.container {
+  display: block;
+  position: fixed;
+  z-index: 50;
+  background: $spc-white;
+  top:-200%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  overflow-y: scroll;
+  }
+
+.menu {
+  display: block;
+  cursor: pointer;
+  position: fixed;
+  z-index: 51;
+  top: 7px;
+  right: 15px;
+  font-size: 25px;
+  font-family: spc-icons;
+  background: $spc-white;
+  padding: 5px;
+  border-radius: $spc-border-radius;
+  &:hover{
+    color: $spc-red;
+  }
+  &:visited, &:active{
+    color: $spc-darkblue;
+  }
+  span{
+    display: none;
+  }
+}
+
+.icon-cancel{
+  top: 10px;
+}
+
+.show-menu {
+    top:0;
+}
+
+
+//navigation
+
+.nav-bar,.nav-bar .nav-social, .nav-bar .nav-social ul, .nav-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-bar{
+  margin-top: 50px;
+  .nav-social {
+    border-top: 1px solid $spc-grey;
+    border-bottom: 1px solid $spc-grey;
+    ul{
+      align-self: center;
+      flex-direction: row;
+
+    }
+    a{
+      display: block;
+      padding: 20px;
+    }
+  }
+}
+
+.nav-main a {
+  display: block;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid $spc-grey;
+  &:hover {
+    background: lighten($spc-grey, 8%);
+  }
+}
