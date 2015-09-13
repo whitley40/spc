@@ -42,7 +42,8 @@ gulp.task('minifyCss', ['addPrefix'], function(){
 
 gulp.task("concatScripts", function(){
     return gulp.src([
-        'src/js/**/*.js'])
+        'src/js/**/*.js',
+        '!src/js/app.js'])
     .pipe(maps.init())
     .pipe(concat("app.js"))
     .pipe(maps.write('../maps'))

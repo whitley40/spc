@@ -18,6 +18,10 @@ body * {
 	display: none;
 }
 
+.noscroll {
+	overflow: none;
+}
+
 //main font use
 ::selection {
 	background: $spc-lightblue;

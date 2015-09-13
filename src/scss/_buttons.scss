@@ -4,7 +4,10 @@
 
 .main-cta {
 	align-self: center;
-	display: inline-block;
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	align-items:center;
 	position: relative;
 	cursor: pointer;
 	width: auto;
@@ -12,24 +15,19 @@
 	color: $spc-white;
 	font-size: 18px;
 	text-transform: uppercase;
-	padding: 18px 55px 18px 25px;
+	padding: 20px 20px;
 	border-radius: $spc-border-radius;
-	&:after {
-		display: block;
-		position: absolute;
-		right: 20px;
-		font-size: 14px;
-		top: 38%;
-		font-family: spc-icons;
-		content: "r";
-		text-transform: lowercase;
-		transition: all 0.2s ease-in;
+	transition: all 0.2s ease-in;
+	span {
+		font-size: 15px;
+		margin:4px 0px 0px 15px;
 	}
 	&:hover{
 		background: darken($spc-red, 30%);
 		color: $spc-white;
-		&:after {
+		span{
 			right: 10px;
+			margin:4px 0px 0px 25px;
 		}
 	}
 }

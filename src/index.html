@@ -23,14 +23,11 @@
 	<!--  Mobile Viewport -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- favicon -->
-	<link rel="shortcut icon" href="favicon.ico" />	
-	<!-- fonts -->
+	<link rel="shortcut icon" href="imgs/SPC-logo.svg" />	
+	<!-- icon fonts from fontastic.me -->
 	<link href="https://fontastic.s3.amazonaws.com/hzTWcwQEtJUKbecWL3w6K4/icons.css" rel="stylesheet">
-	<!-- concatenate and minify for production -->
+	<!-- SPC Styles -->
 	<link rel="stylesheet" href="css/styles.css" />
-
-	
-	
 
 </head>
 
@@ -40,40 +37,36 @@
 
 	<header class="nav-bar">
 
-		<input type="checkbox" id="m-menu">
-			<label class="mobile-menu" for="m-menu"><span>Show Menu</span></label>
-
+		<a class="menu icon-list" ontouchend="this.onclick=fix"><span>Show Menu</span></a>
 
 		<div class="container">
 
+			<h1 class="hidden"><a class="nav-logo" href="#">Simpson Performance Consulting</a></h1>
 
-		
-		<h1 class="hidden"><a class="nav-logo" href="#">Simpson Performance Consulting</a></h1>
+			<nav class="nav-social">
+				<ul>
+					<li><a class="tw" href="#" target="_blank"><span>Twitter</span></a></li>
+					<li><a class="fb" href="#" target="_blank"><span>Facebook</span></a></li>
+					<li><a class="vm" href="#" target="_blank"><span>Vimeo</span></a></li>
+					<li><a class="yt" href="#" target="_blank"><span>Youtube</span></a></li>
+				</ul>
+			</nav>
 
-		<nav class="nav-social">
-			<ul>
-				<li><a class="tw" href="#" target="_blank"><span>Twitter</span></a></li>
-				<li><a class="fb" href="#" target="_blank"><span>Facebook</span></a></li>
-				<li><a class="vm" href="#" target="_blank"><span>Vimeo</span></a></li>
-				<li><a class="yt" href="#" target="_blank"><span>Youtube</span></a></li>
-			</ul>
-		</nav>
-		
-		<nav class="nav-main">
-			<ul>
-				<li><a href="#">SCP</a></li>
-				<li><a href="#">Expertise</a></li>
-				<li><a href="#">Training</a></li>
-				<li><a href="#">Benefits</a></li>
-				<li><a href="#">Science</a></li>
-				<li><a href="#">Case Studies</a></li>
-				<li><a href="#">Our Story</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
-		</nav>
+			<nav class="nav-main">
+				<ul>
+					<li><a href="#">SCP</a></li>
+					<li><a href="#">Expertise</a></li>
+					<li><a href="#">Training</a></li>
+					<li><a href="#">Benefits</a></li>
+					<li><a href="#">Science</a></li>
+					<li><a href="#">Case Studies</a></li>
+					<li><a href="#">Our Story</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
 
 		</div>
-	
+
 	</header>
 
 	<!-- ############ Homepage Banner ############ -->
@@ -83,7 +76,7 @@
 		<h1><a href="#"><img src="imgs/SPC-logo.svg" /><span>Simpson Performance Consulting</span></a></h1>
 		<h2>Specializing in Sport & Performance Psychology</h2>
 		<p>Simpson Performance Consulting (SPC) works exclusively with high-end performers and teams who want to be the best in their field, be that sport or business.</p>
-		<a class="main-cta">Benefits<span></span></a>
+		<a class="main-cta">Benefits<span class="icon-chevron-right"></span></a>
 
 	</section>	
 
@@ -112,7 +105,7 @@
 		<img class="portal" src="imgs/circles/c-tennis-male.jpg" />
 		<h2>"Building a High Performance Mindset"</h2>
 		<p>Our aim is to help our clients reach their fullest potential and build a sustainable competitive advantage by providing them with the knowledge and skills to consistently maximize their performance.</p>
-		<a href="#" class="main-cta">Areas of Expertise<span></span></a>
+		<a href="#" class="main-cta">Areas of Expertise<span class="icon-chevron-right"></span></a>
 
 	</section>
 
@@ -123,7 +116,7 @@
 		<img class="portal" src="imgs/circles/c-meeting.jpg" />
 		<h2>Our Approach</h2>
 		<p>SPC’s approach is grounded in the latest scientific and applied principles of sport and performance psychology. The mission of SPC is to help successful individuals and teams get even better and assist them in striving for personal excellence.</p>
-		<a href="#" class="main-cta">Training Solutions<span></span></a>
+		<a href="#" class="main-cta">Training Solutions<span class="icon-chevron-right"></span></a>
 
 	</section>
 
@@ -135,12 +128,12 @@
 		
 	</footer>
 
-<!-- Grab Google CDN's jQuery. fall back to local if necessary -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
-<!-- this is where we put our custom functions -->
-<!-- don't forget to concatenate and minify if needed -->
-<script src="js/app.js"></script>
+	<!-- this is where we put our custom functions -->
+	<!-- don't forget to concatenate and minify if needed -->
+	<script src="js/app.js"></script>
 
 <!-- Asynchronous google analytics; this is the official snippet.
 	 Replace UA-XXXXXX-XX with your site's ID and uncomment to enable.
@@ -154,6 +147,6 @@
   ga('send', 'pageview');
 </script>
 -->
-  
+
 </body>
 </html>
