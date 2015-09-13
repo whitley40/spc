@@ -77,4 +77,8 @@
   &:hover {
     background: lighten($spc-grey, 8%);
   }
+  &.selected{
+    background:$spc-red;
+    color: $spc-white;
+  }
 }
