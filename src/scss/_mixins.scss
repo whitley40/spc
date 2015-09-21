@@ -54,14 +54,20 @@ remember - mobile first!!
 */
 
 @mixin bp-medium {
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: 800px) {
     @content;
   }
 }
 
 
 @mixin bp-large {
-  @media only screen and (min-width: 760px) {
+  @media only screen and (min-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin bp-x-large {
+  @media only screen and (min-width: 1200px) {
     @content;
   }
 }

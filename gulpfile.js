@@ -17,7 +17,9 @@ gulp.task('compileSass', function() {
     .pipe(sass())
     .pipe(maps.write('../maps'))
     .pipe(gulp.dest('src/css'))
-    .pipe(gulp.dest('dev/css'));
+    .pipe(gulp.dest('dev/css'))
+    .pipe(gulp.rename('style.css'))
+    .pipe(gulp.dest('../wp-content/themes/spc-theme'));
 });
 
 
@@ -27,7 +29,9 @@ gulp.task('addPrefix', ['compileSass'], function() {
     return gulp.src('dev/css/styles.css')
     .pipe(autoprefixer())
     .pipe(gulp.dest('src/css'))
-    .pipe(gulp.dest('dev/css'));
+    .pipe(gulp.dest('dev/css'))
+    .pipe(gulp.rename('style.css'))
+    .pipe(gulp.dest('../wp-content/themes/spc-theme'));
 });
 
 /* minify the css */
@@ -47,6 +51,7 @@ gulp.task("concatScripts", function(){
     .pipe(maps.init())
     .pipe(concat("app.js"))
     .pipe(maps.write('../maps'))
+    .pipe(gulp.dest('../wp-content/themes/spc-theme/js'))
     .pipe(gulp.dest('src/js'))
     .pipe(gulp.dest('dev/js'));
 });
@@ -57,8 +62,27 @@ gulp.task("concatScripts", function(){
 gulp.task("minifyScripts", ["concatScripts"],  function(){
     return gulp.src("dev/js/app.js")
     .pipe(uglify())
-    .pipe(rename('app.min.js'))
+    .pipe(rename('app.js'))
+    .pipe(gulp.dest('../wp-content/themes/spc-theme/js'))
     .pipe(gulp.dest('dist/js'));
+});
+
+/* move images across */
+
+gulp.task('moveImgs', function() {
+    return gulp.src('src/imgs/**')
+    .pipe(gulp.dest('../wp-content/themes/spc-theme/imgs'))
+    .pipe(gulp.dest('dev/imgs'))
+    .pipe(gulp.dest('dist/imgs'));
+});
+
+/* move fonts across */
+
+gulp.task('moveFonts', function() {
+    return gulp.src('src/fonts/**')
+    .pipe(gulp.dest('../wp-content/themes/spc-theme/fonts'))
+    .pipe(gulp.dest('dev/fonts'))
+    .pipe(gulp.dest('dist/fonts'));
 });
 
 /* run browsersync */
@@ -81,22 +105,30 @@ gulp.task('browserSync', function() {
 /* setting up a clean */
 
 gulp.task('clean', function(){
-    del(['dist', 'dev', 'src/js/app.js', 'src/css', 'src/maps']);
+    del(['dist', 'dev', '../wp-content/themes/spc-theme' , 'src/js/app.js', 'src/css', 'src/maps']);
 })
 
 /* gulp commands */
 
 gulp.task('serve',['browserSync']);
 
-gulp.task("build", ["addPrefix", "concatScripts" ], function() {
-    return gulp.src(['src/*.html','src/imgs','src/fonts'])
+gulp.task("build", ["addPrefix", "concatScripts",'moveImgs','moveFonts'], function() {
+    return gulp.src(['src/*.html'])
             .pipe(gulp.dest('dev'));
 });
 
-gulp.task("production", ["minifyScripts","minifyCss"], function() {
-    return gulp.src(['src/*.html','src/imgs','src/fonts'])
+gulp.task("production", ["minifyScripts","minifyCss",'moveImgs','moveFonts'], function() {
+    return gulp.src(['src/*.html'])
             .pipe(gulp.dest('dist'));
 });
+
+/* adding all to WP theme */
+
+gulp.task("wp", ["minifyScripts","addPrefix",'moveImgs','moveFonts'], function() {
+    return gulp.src(['src/*.php'])
+            .pipe(gulp.dest('../wp-content/themes/spc-theme'));
+});
+
 
 /* gulp default */
 

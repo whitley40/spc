@@ -1,0 +1,389 @@
+//all page variations
+
+//areas of expertise
+
+.aoe-banner {
+  background: url('../imgs/banners/banners-main-expertise.jpg') $spc-darkblue;
+  background-size: cover;
+  background-position: center;
+}
+
+.aoe-two {
+  border-bottom: 60px solid white;
+}
+
+//training
+
+.training-banner {
+  background: url('../imgs/banners/banners-main-training.jpg') $spc-darkblue;
+  background-size: cover;
+  background-position: center;
+  //medium screen upwards
+    @include bp-medium {
+      background: url('../imgs/banners/banners-dt-main-training.jpg') $spc-darkblue;
+      background-size: cover;
+      background-position: center;
+    }
+}
+
+//benefits
+
+.benefits-banner {
+  background: url('../imgs/banners/banners-main-benefits2.jpg') $spc-darkblue;
+  background-size: cover;
+  background-position: center;
+  //medium screen upwards
+    @include bp-medium {
+      background: url('../imgs/banners/banners-dt-main-benefits2.jpg') $spc-darkblue;
+      background-size: cover;
+      background-position: center;
+    }
+}
+
+//the science
+
+.science-banner {
+  background: url('../imgs/banners/banners-main-science.jpg') $spc-darkblue;
+  background-size: cover;
+  background-position: center;
+  //medium screen upwards
+    @include bp-medium {
+      background: url('../imgs/banners/banners-dt-main-science.jpg') $spc-darkblue;
+      background-size: cover;
+      background-position: center;
+    }
+}
+
+.science-one {
+  padding: 50px 20px 80px;
+  //large screen upwards
+  @include bp-large {
+        padding:50px 80px 80px;
+    }
+}
+
+.science-two{
+  position:relative;
+  padding-top:180px;
+  .portal{
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    margin-left:auto;
+    margin-right:auto;
+    top: -55px;
+  }
+}
+
+.science-three {
+  padding:20px 20px 20px;
+  border-bottom:20px $spc-darkblue solid;
+  //large screen upwards
+    @include bp-large {
+      padding: 20px 80px 20px;
+    }
+  header{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items:center;
+    .portal{
+      width:80px;
+      height:80px;
+      margin-bottom:0px;
+        //medium screen upwards
+        @include bp-medium {
+          width:120px;
+          height:120px;
+        }
+    }
+  }
+}
+
+.science-four {
+  //large screen upwards
+    @include bp-large {  
+          flex-direction: row;
+          div:nth-child(1){
+            //medium screen upwards
+            @include bp-medium {
+              padding-right:40px;
+            }
+          }
+          div:nth-child(2){
+            //medium screen upwards
+            @include bp-medium {
+              padding-left:40px;
+            }
+          }
+    }
+}
+
+
+//case studies
+
+.case-studies-banner {
+  background: url('../imgs/banners/banners-main-case-studies.jpg') $spc-darkblue;
+  background-size: cover;
+  background-position: center;
+  //medium screen upwards
+    @include bp-medium {
+      background: url('../imgs/banners/banners-dt-main-case-studies.jpg') $spc-darkblue;
+      background-size: cover;
+      background-position: center;
+    }
+}
+
+.case-studies-one {
+  padding-bottom:0px;
+  }
+
+.case-studies-two {
+  padding:0px 0px 0px;
+  border-bottom:50px $spc-white solid;
+  padding-top:0px;
+  .case-detail {
+    padding:40px 20px 40px;
+    //large screen upwards
+    @include bp-large {
+      padding: 40px 80px 40px;
+    }
+  }
+  header{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    min-height:400px;
+    &.matt{
+      background: url('../imgs/banners/banners-testimonial-matt.jpg') $spc-red;
+      background-size: cover;
+      background-position: center;
+        //medium screen upwards
+        @include bp-medium {
+          background: url('../imgs/banners/banners-testimonial-matt-dt.jpg') $spc-darkblue;
+          background-size: cover;
+          background-position: center;
+        }
+    }
+    &.avi{
+      background: url('../imgs/banners/banners-testimonial-avi.jpg') $spc-red;
+      background-size: cover;
+      background-position: center;
+      //medium screen upwards
+        @include bp-medium {
+          background: url('../imgs/banners/banners-testimonial-avi-dt.jpg') $spc-darkblue;
+          background-size: cover;
+          background-position: center;
+        }
+    }
+    &.dan{
+      background: url('../imgs/banners/banners-testimonial-daniel.jpg') $spc-red;
+      background-size: cover;
+      background-position: center;
+      //medium screen upwards
+        @include bp-medium {
+          background: url('../imgs/banners/banners-testimonial-daniel-dt.jpg') $spc-darkblue;
+          background-size: cover;
+          background-position: center;
+        }
+    }
+  }
+}
+
+//our story
+
+.our-story-banner {
+  background: url('../imgs/banners/banners-main-our-story.jpg') $spc-darkblue;
+  background-size: cover;
+  background-position: center;
+  //medium screen upwards
+    @include bp-medium {
+      background: url('../imgs/banners/banners-dt-main-our-story.jpg') $spc-darkblue;
+      background-size: cover;
+      background-position: center;
+    }
+}
+
+.our-story-one{
+  padding-bottom: 0px;
+}
+
+.our-story-two {
+  padding-top:0px;
+}
+
+.our-story-three {
+  background:$spc-grey;
+  svg {
+    align-self:center;
+    width:200px;
+    
+  }
+}
+
+//contact page
+
+.contact-banner {
+  flex-direction: column-reverse;
+  background: url('../imgs/banners/banners-main-contact2.jpg') $spc-darkblue;
+  background-size: cover;
+  background-position: center;
+  min-height:150px;
+  &:after{
+    opacity: 0;
+  }
+  //medium screen upwards
+    @include bp-medium {
+      background: url('../imgs/banners/banners-dt-main-contact2.jpg') $spc-darkblue;
+      background-size: cover;
+      background-position: center;
+    }
+  .page-description{
+    h2{
+      margin:0px;
+    }
+  }
+}
+
+.contact-cols{
+  display:flex;
+  flex-direction:column-reverse;
+  padding:20px 20px 20px;
+  margin:0px;
+    //medium screen upwards
+    @include bp-medium {
+      flex-direction:row;
+    }
+    //large screen upwards
+    @include bp-large {
+      padding: 20px 80px 20px;
+    }
+  section {
+    padding:20px 0px 20px;
+  }
+}
+
+.contact-one {
+  //medium screen upwards
+    @include bp-medium {
+        min-width:380px;
+        margin-right:80px;
+    }
+  form{
+    display:flex;
+    flex-direction: column;
+    label{
+      position:absolute;
+      top:-100px;
+      left:-100px;
+    }
+    input, textarea{
+      background:$spc-grey;
+      padding:15px 20px;
+      margin:0px 0px 25px;
+      border:none;
+      outline:none;
+      appearance: none;
+      border-bottom:2px $spc-red solid;
+      border-radius:$spc-border-radius;
+      font-family:$font-regular;
+   color: $spc-black;  
+   @include font-size(14px);
+      &:focus{
+        background:$spc-white;
+      }
+    }
+  }
+}
+
+//placeholder code
+
+input::-webkit-input-placeholder {
+  font-family:$font-regular;
+   color: $spc-placeholder-grey;
+   @include font-size(14px);
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+  font-family:$font-regular;
+   color: $spc-placeholder-grey;  
+   @include font-size(14px);
+}
+
+input::-moz-placeholder {  /* Firefox 19+ */
+  font-family:$font-regular;
+   color: $spc-placeholder-grey;  
+   @include font-size(14px);
+}
+
+input:-ms-input-placeholder {  
+  font-family:$font-regular;
+   color: $spc-placeholder-grey;  
+   @include font-size(14px);
+}
+
+textarea::-webkit-input-placeholder {
+  font-family:$font-regular;
+   color: $spc-placeholder-grey;
+   @include font-size(14px);
+}
+
+textarea:-moz-placeholder { /* Firefox 18- */
+  font-family:$font-regular;
+   color: $spc-placeholder-grey;
+   @include font-size(14px);  
+}
+
+textarea::-moz-placeholder {  /* Firefox 19+ */
+  font-family:$font-regular;
+   color: $spc-placeholder-grey;  
+   @include font-size(14px);
+}
+
+textarea:-ms-input-placeholder {  
+  font-family:$font-regular;
+   color: $spc-placeholder-grey;  
+   @include font-size(14px);
+}
+
+.contact-two {
+  width:100%;
+  padding-top:0px;
+  .contacts{
+    display:flex;
+    flex-direction: column;
+    a{
+      display:flex;
+      flex-direction: row;
+      padding:5px 0px;
+      align-items:center;
+      overflow: hidden;
+      span:nth-child(1){
+        margin-right:10px;
+        margin-top: 4px;
+      }
+          //margin:15px;
+        }
+      }
+      .nav-social {
+        display:flex;
+        flex-direction: row;
+        @include font-size(20px);
+        ul{
+          display:flex;
+          flex-direction: row;
+          align-items:center;
+          margin: 0px 0px 0px -20px;
+          li{
+            display:flex;
+          }
+        }
+        a{
+          padding: 15px;
+        }
+      }
+
+    }
+
+
+

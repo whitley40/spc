@@ -14,26 +14,31 @@ body * {
 	transition: all 0.2s ease-in;
 }
 
+//hide anything!
+
 .hidden {
-	display: none;
+	display: none!important;
 }
+
+//stop element from scrolling!
 
 .noscroll {
-	overflow: none;
+	overflow: hidden;
 }
 
-//main font use
+//main character styles! 
+
 ::selection {
 	background: $spc-lightblue;
 	color: #fff; 
-
 }
+
 p {
 	font-family:$font-light;
-	font-size: 18px;
+	@include font-size(18px);
 	color: $spc-darkblue;
 	line-height: 24px;
-	margin: 0px 0px 40px;
+	margin: 0px 0px 20px;
 	small {
 		font-size: 12px;
 	}
@@ -42,27 +47,42 @@ p {
 		font-style: italic;
 		font-size: 24px;
 		line-height: 32px;
+		text-align:center;
+		margin:40px auto 40px;
+		max-width:900px;
 	}
 }
 
 h1 {
 	font-family: $font-heavy;
-	font-size: 50px;
+	@include font-size(50px);
 	color: $spc-darkblue;
 	line-height: 60px;
 	margin: 10px 0px 10px;
+	letter-spacing:-0.1rem;
 }
 
 h2  {
 	font-family: $font-heavy;
-	font-size: 35px;
+	@include font-size(35px);
 	color: $spc-darkblue;
 	line-height: 45px;
 	margin: 10px 0px 20px;
+	letter-spacing:-0.02rem;
+}
+
+h3  {
+	font-family: $font-regular;
+	@include font-size(20px);
+	color: $spc-lightblue;
+	line-height: 30px;
+	margin: 0px 0px 20px;
+	font-style:italic;
 }
 a {
-	color: $spc-darkblue;
+	color: $spc-red;
 	text-decoration: none;
+	transition: all 0.2s ease-in;
 	&:hover{
 		color: $spc-red;
 	}
@@ -73,54 +93,163 @@ a {
 section {
 	display: flex;
 	flex-direction: column;
-	padding: 60px 20px;
-	text-align: center;
+	padding: 50px 20px;
+	text-align: left;
+	position:relative;
+	//large screen upwards
+	@include bp-large {
+    	padding: 50px 80px;
+    }
 	ul{
-	padding:0px;
-	margin:20px 0px 40px 60px;
-	column-count: 1;
-	li{
 		display: flex;
-		flex-direction: row;
-		padding:5px;
-		text-align: left;
-		span {
-			margin: 0px 20px 0px 0px;
+		flex-direction: column;
+		padding:0px;
+		margin:10px 0px 40px 0px;
+		&.split{
+			//medium screen upwards
+		    @include bp-medium {
+		    	flex-direction: row;
+		    }
+		}
+		.split-list{
+			display: flex;
+			flex-direction: column;
+				//medium screen upwards
+		    @include bp-medium {
+		    	padding-right:80px;
+		    }
+		}
+		li{
+			@include font-size(18px);
+			display: flex;
+			flex-direction: row;
+			padding:5px;
+			span {
+				@include font-size(8px);
+				margin: 5px 20px 0px 0px;
+			}
 		}
 	}
-}
 }
 
 .section-blue {
 	background: $spc-darkblue;
 	p,a,h1,h2,ul,li{
-	color: $spc-white;
+		color: $spc-white;
 	}
+}
+
+//Contain & center content with a max width
+
+.content-container {
+  display:inherit;
+  flex-direction: inherit;
+  justify-content:inherit;
+  align-items:inherit;
+  //medium screen upwards
+        @include bp-medium {
+          margin:0px auto;
+          width:100%;
+          max-width:1000px;
+        }
+}
+
+.header-container {
+  padding: 0px 20px;
+  z-index: 5;
+        //medium screen upwards
+        @include bp-medium {
+         padding: 0px 20px 10px;
+        }
+        //large screen upwards
+        @include bp-large {
+            padding: 0px 80px 10px;
+          }
+
+}
+
+//video content
+
+.video {
+	display: flex;
+    margin: 0px auto 40px;
 }
 
 //banners
 
 .content-banner {
-	padding:60px 0px 0px;
+	display: flex;
+	flex-direction: column;
+	padding:230px 0px 0px;
+	//medium screen upwards
+    @include bp-medium {
+    	padding:250px 0px 0px;
+    }
+    //large screen upwards
+    @include bp-large {
+    	padding:350px 0px 0px;
+    }
+    &::after{
+    z-index: 0;
+  	display:block;
+  	position:absolute;
+  	content: '';
+  	left:0;
+  	top:0;
+  	width:100%;
+  	height:100%;
+  	background:$spc-darkblue;
+  	opacity: 0.3;
+  }
 	h2{
-		margin:30px 0px 10px;
-		text-shadow: 1px 1px 4px $spc-darkblue;
+		z-index: 1;
+		@include font-size(40px);
+		//margin:30px 0px 10px 0px;
+		text-shadow: 1px 3px 4px $spc-darkblue;
+		 //medium screen upwards
+        @include bp-medium {
+          @include font-size(50px);
+          //margin:30px 0px 30px 0px;
+        }
+		//large screen upwards
+    @include bp-large {
+    	//margin:30px 0px 30px 0px;
+    }
+	}
+	.main-cta {
+		z-index: 1;
+		//medium screen upwards
+    @include bp-medium {
+    	align-self:flex-end;
+    }
 	}
 }
 
 .page-description {
+	z-index: 1;
 	display:flex;
 	flex-direction:column;
-	background:rgba(21,33,45,0.3);
+	background:rgba(21,33,45,0.8);
 	padding:20px 20px 20px;
+	//large screen upwards
+    @include bp-large {
+    	padding:20px 80px 20px;
+    }
 	p{
 		margin:0px 0px 20px;
 		text-shadow: 1px 1px 4px $spc-darkblue;
+		//medium screen upwards
+    @include bp-medium {
+    	max-width:650px;
+    	margin:0px 0px 0px;
+    }
+    q{
+    	@include font-size(22px);
+    	line-height:32px;
+    }
 	}
 	a{
-		position: absolute;
-    right: 50px;
-    left: 50px;
+		margin-bottom:-45px;
 	}
 }
 
@@ -131,6 +260,7 @@ section {
 	width: 195px;
 	height: 195px;
 	align-self: center;
+  margin-bottom:20px;
 }
 
 .portal-collection{
@@ -139,25 +269,29 @@ section {
 	position:relative;
 	padding: 20px 0px 20px;
 	justify-content:center;
+  //medium screen upwards
+    @include bp-medium {
+      padding: 20px 0px 60px;
+    }
 	.portal{
 		width: 33.3%;
-		height: 33.3%;
+		height: auto;
 		max-width: 195px;
 		max-height: 195px;
 	}
 	:nth-child(2){
-			z-index: 2;
-			margin-left: -50px;
-		}
-		:nth-child(3){
-			z-index: 3;
-			margin-left: -50px;
-		}
+		z-index: 2;
+		margin-left: -20px;
+	}
+	:nth-child(3){
+		z-index: 3;
+		margin-left: -20px;
+	}
 }
 
 
 
-//contact bar
+//general nav & contact styles
 
 .nav-social {
 	a{
@@ -169,18 +303,6 @@ section {
 			display: none;
 		}	
 	}
-	.tw:after{
-		content: 't';
-	}
-	.fb:after{
-		content: 'f';
-	}
-	.vm:after{
-		content: 'v';
-	}
-	.yt:after{
-		content: 'y';
-	}
 }
 
 //contact bar 
@@ -189,24 +311,61 @@ section {
 	display: flex;
 	flex-direction: column;
 	padding:20px 20px;
+	//medium screen upwards
+    @include bp-medium {
+    	flex-direction: row;
+    }
+    //large screen upwards
+    @include bp-large {
+      padding: 20px 80px 20px;
+    }
+    a{
+    	&:hover{
+    		color:$spc-red;
+    	}
+    }
 	a.link-icon{
 		display: flex;
 		flex-direction: row;
 		padding: 4px 0px 4px;
+		overflow:hidden; //fix for email address breaking widths, NOT IDEAL
+		//overflow-x: scroll;  - fixes much smaller screens from ebing broken by large email 
 		span{
 			color: $spc-red;
 			padding-right: 10px;
 		}
+		span.big-email{
+			color: $spc-white;
+			padding-right:0px;
+			&:hover{
+    		color:$spc-red;
+    	}
+		}
+		//medium screen upwards
+	    @include bp-medium {
+	    	padding-right:20px;
+	    }
 	}
-	.nav-social ul{
+	.nav-social {
 		display: flex;
-		flex-direction: row;
-		align-self: center;
-		width: auto;
-		margin: 0px;
-		a{
-			display: block;
-			padding: 10px 10px 0px 0px;
+		//medium screen upwards
+	    @include bp-medium {
+	    	margin-left:auto;
+	    }
+		ul{
+			display: flex;
+			flex-direction: row;
+			align-self: center;
+			width: auto;
+			margin: 0px;
+			a{
+				display: block;
+				padding: 10px 10px 0px 0px;
+				//medium screen upwards
+		    @include bp-medium {
+		    	padding: 0px;
+		    }
+			}
 		}
 	}
 

@@ -10,7 +10,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	
 	<!-- Important stuff for SEO, don't neglect. (And don't dupicate values across your site!) -->
-	<title>SPC Sports Consultants</title>
+	<title>SPC Simpson Performance Consulting</title>
 	<meta name="author" content="Dr Duncan Simpson" />
 	<meta name="description" content="Sports, Consultant, Performance" />
 	
@@ -23,7 +23,7 @@
 	<!--  Mobile Viewport -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- favicon -->
-	<link rel="shortcut icon" href="imgs/SPC-logo.svg" />	
+	<link rel="shortcut icon" href="imgs/spc-fav.png" />	
 	<!-- icon fonts from fontastic.me -->
 	<link href="https://fontastic.s3.amazonaws.com/hzTWcwQEtJUKbecWL3w6K4/icons.css" rel="stylesheet">
 	<!-- SPC Styles -->
@@ -31,41 +31,57 @@
 
 </head>
 
-<body>
+<body class="homepage">
+
+<!-- top button -->
+<a class="spc-top icon-arrow-up"><span>Top</span></a>
 
 	<!-- ############ Navigation ############ -->
 
 	<header class="nav-bar">
 
+  <div class="content-container">
+
+	<h1 class="hidden"><a class="nav-logo" href="index.html">Simpson Performance Consulting</a></h1>
+
+	<nav class="nav-social social-home">
+        <ul>
+          <li><a class="icon-twitter" href="#" target="_blank"><span>Twitter</span></a></li>
+          <li><a class="icon-facebook" href="#" target="_blank"><span>Facebook</span></a></li>
+          <li><a class="icon-vimeo" href="#" target="_blank"><span>Vimeo</span></a></li>
+          <li><a class="icon-youtube-alt" href="#" target="_blank"><span>Youtube</span></a></li>
+        </ul>
+      </nav>
+
 		<a class="menu icon-list" ontouchend="this.onclick=fix"><span>Show Menu</span></a>
 
-		<div class="container">
-
-			<h1 class="hidden"><a class="nav-logo" href="#">Simpson Performance Consulting</a></h1>
+		<div class="nav-container">
 
 			<nav class="nav-social">
-				<ul>
-					<li><a class="tw" href="#" target="_blank"><span>Twitter</span></a></li>
-					<li><a class="fb" href="#" target="_blank"><span>Facebook</span></a></li>
-					<li><a class="vm" href="#" target="_blank"><span>Vimeo</span></a></li>
-					<li><a class="yt" href="#" target="_blank"><span>Youtube</span></a></li>
-				</ul>
-			</nav>
+        <ul>
+          <li><a class="icon-twitter" href="#" target="_blank"><span>Twitter</span></a></li>
+          <li><a class="icon-facebook" href="#" target="_blank"><span>Facebook</span></a></li>
+          <li><a class="icon-vimeo" href="#" target="_blank"><span>Vimeo</span></a></li>
+          <li><a class="icon-youtube-alt" href="#" target="_blank"><span>Youtube</span></a></li>
+        </ul>
+      </nav>
 
-			<nav class="nav-main">
-				<ul>
-					<li><a href="#">SCP</a></li>
-					<li><a href="#">Expertise</a></li>
-					<li><a href="#">Training</a></li>
-					<li><a href="#">Benefits</a></li>
-					<li><a href="#">Science</a></li>
-					<li><a href="#">Case Studies</a></li>
-					<li><a href="#">Our Story</a></li>
-					<li><a href="#">Contact</a></li>
-				</ul>
-			</nav>
+			 <nav class="nav-main">
+        <ul>
+          <li><a href="index.html" class="selected">Home</a></li>
+          <li><a href="areasofexpertise.html">Expertise</a></li>
+          <li><a href="training.html">Training</a></li>
+          <li><a href="benefits.html">Benefits</a></li>
+          <li><a href="science.html">Science</a></li>
+          <li><a href="case-studies.html">Case Studies</a></li>
+          <li><a href="our-story.html">Our Story</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
 
 		</div>
+
+    </div>
 
 	</header>
 
@@ -73,10 +89,14 @@
 	
 	<section class="homepage-banner section-blue">
 
+    <div class="content-container">
+
 		<h1><a href="#"><img src="imgs/SPC-logo.svg" /><span>Simpson Performance Consulting</span></a></h1>
 		<h2>Specializing in Sport & Performance Psychology</h2>
 		<p>Simpson Performance Consulting (SPC) works exclusively with high-end performers and teams who want to be the best in their field, be that sport or business.</p>
-		<a class="main-cta">Benefits<span class="icon-chevron-right"></span></a>
+		<a href="benefits.html" class="main-cta">Benefits<span class="icon-chevron-right"></span></a>
+
+    </div>
 
 	</section>	
 
@@ -84,7 +104,9 @@
 	
 	<section class="contact-bar section-blue">
 
-		<a href="mailto:drsimpson@simpsonperformanceconsulting.com" class="link-icon"><span class="icon-email-envelope"></span> drsimpson@simpsonperformanceconsulting.com</a>
+  <div class="content-container">
+
+		<a href="mailto:info@simpsonperformanceconsulting.com" class="link-icon"><span class="icon-email-envelope"></span><span class="big-email">info@simpsonperformanceconsulting.com</span></a>
 		<a  href="tel:+1-800-555-5555" class="link-icon"><span class="icon-mobile"></span> +1 800 555 5555</a>
 
 		<nav class="nav-social hidden">
@@ -96,16 +118,22 @@
 			</ul>
 		</nav>
 
+    </div>
+
 	</section>
 
 	<!-- ############ Homepage Section One ############ -->
 
 	<section class="homepage-one">
 
-		<img class="portal" src="imgs/circles/c-tennis-male.jpg" />
+  <div class="content-container">
+
+		<img class="portal" src="imgs/circles/c-dunc-teaching-circle.jpg" />
 		<h2>"Building a High Performance Mindset"</h2>
 		<p>Our aim is to help our clients reach their fullest potential and build a sustainable competitive advantage by providing them with the knowledge and skills to consistently maximize their performance.</p>
-		<a href="#" class="main-cta">Areas of Expertise<span class="icon-chevron-right"></span></a>
+		<a href="areasofexpertise.html" class="main-cta">Areas of Expertise<span class="icon-chevron-right"></span></a>
+
+    </div>
 
 	</section>
 
@@ -113,10 +141,14 @@
 
 	<section class="homepage-two  section-blue">
 
+  <div class="content-container">
+
 		<img class="portal" src="imgs/circles/c-meeting.jpg" />
 		<h2>Our Approach</h2>
 		<p>SPC’s approach is grounded in the latest scientific and applied principles of sport and performance psychology. The mission of SPC is to help successful individuals and teams get even better and assist them in striving for personal excellence.</p>
-		<a href="#" class="main-cta">Training Solutions<span class="icon-chevron-right"></span></a>
+		<a href="training.html" class="main-cta">Training Solutions<span class="icon-chevron-right"></span></a>
+
+    </div>
 
 	</section>
 

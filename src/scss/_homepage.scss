@@ -2,17 +2,48 @@
 
 //homepage banner
 
+.homepage-one, .homepage-two {
+	text-align:center;
+	align-items:center;
+	.main-cta{
+		align-self:center;
+	}
+	p {
+		max-width: 650px;
+	}
+}
+
 .homepage-banner {
 	padding: 20px 20px 20px;
 	background: url('../imgs/homepage-banner.jpg') $spc-darkblue;
 	background-size: cover;
 	background-position: center;
+	//medium screen upwards
+    @include bp-medium {
+    	padding: 20px 20px 50px;
+    }
+	//large screen upwards
+    @include bp-large {
+      padding: 40px 80px 100px;
+    }
 	h1{
 		padding: 0px 0px 0px;
+		color:$spc-white;
 		filter: drop-shadow( 1px 1px 4px $spc-darkblue );
+		a{
+			//medium screen upwards
+			@include bp-medium {
+				display:flex;
+			}
+		}
 		img{
 			width: 200px;
 			color: $spc-white;
+			//medium screen upwards
+		    @include bp-medium {
+		    	width: 250px;
+		    	margin-left:-10px;
+		    }
 		}
 		span {
 			display: none;
@@ -21,6 +52,10 @@
 	h2, p {
 		text-shadow: 1px 1px 4px $spc-darkblue;
 		margin: 0px 0px 30px;
+		//medium screen upwards
+    @include bp-medium {
+    	max-width:800px;
+    }
 	}
 }
 
