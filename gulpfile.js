@@ -101,12 +101,31 @@ gulp.task('browserSync', function() {
 
 });
 
+// browsersync for wp 
+
+// browser-sync task for starting the server.
+gulp.task('browsersync-wp', function() {
+    //watch files
+    var files = [
+        '../wp-content/themes/spc-theme/*'
+    ];
+ 
+    //initialize browsersync
+    browsersync.init(files, {
+    //browsersync with a php server
+    proxy: "http://localhost:8888/wordpress-spc/",
+    notify: false
+    });
+});
+
 
 /* setting up a clean */
 
 gulp.task('clean', function(){
-    del(['dist', 'dev', '../wp-content/themes/spc-theme' , 'src/js/app.js', 'src/css', 'src/maps']);
+    del(['dist', 'dev', '../wp-content/themes/spc-theme' , 'src/js/app.js', 'src/css', 'src/maps'], {force: true});
 })
+
+// del(['**/*.html', 'css/*.css'], {force: true}, cb)
 
 /* gulp commands */
 
@@ -122,11 +141,17 @@ gulp.task("production", ["minifyScripts","minifyCss",'moveImgs','moveFonts'], fu
             .pipe(gulp.dest('dist'));
 });
 
-/* adding all to WP theme */
+/* adding all to WP theme browsersync too */
 
-gulp.task("wp", ["minifyScripts","addPrefix",'moveImgs','moveFonts'], function() {
+gulp.task('serve-wp',['browsersync-wp']);
+
+gulp.task("wordpress", ["minifyScripts","addPrefix",'moveImgs','moveFonts'], function() {
     return gulp.src(['src/*.php'])
             .pipe(gulp.dest('../wp-content/themes/spc-theme'));
+});
+
+gulp.task("wp", ["clean", "wordpress"], function(){
+    gulp.start("serve-wp");
 });
 
 
