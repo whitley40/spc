@@ -18,7 +18,7 @@ gulp.task('compileSass', function() {
     .pipe(maps.write('../maps'))
     .pipe(gulp.dest('src/css'))
     .pipe(gulp.dest('dev/css'))
-    .pipe(gulp.rename('style.css'))
+    .pipe(rename('style.css'))
     .pipe(gulp.dest('../wp-content/themes/spc-theme'));
 });
 
@@ -30,7 +30,7 @@ gulp.task('addPrefix', ['compileSass'], function() {
     .pipe(autoprefixer())
     .pipe(gulp.dest('src/css'))
     .pipe(gulp.dest('dev/css'))
-    .pipe(gulp.rename('style.css'))
+    .pipe(rename('style.css'))
     .pipe(gulp.dest('../wp-content/themes/spc-theme'));
 });
 
