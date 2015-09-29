@@ -107,13 +107,13 @@ gulp.task('browserSync', function() {
 gulp.task('browsersync-wp', function() {
     //watch files
     var files = [
-        '../wp-content/themes/spc-theme/*'
+        '../wp-content/themes/spc-theme/**/.*.*'
     ];
  
     //initialize browsersync
     browsersync.init(files, {
     //browsersync with a php server
-    proxy: "http://localhost:8888/wordpress-spc/",
+    proxy: "http://localhost:8888/wordpress-spc",
     notify: false
     });
 });
@@ -123,9 +123,7 @@ gulp.task('browsersync-wp', function() {
 
 gulp.task('clean', function(){
     del(['dist', 'dev', '../wp-content/themes/spc-theme' , 'src/js/app.js', 'src/css', 'src/maps'], {force: true});
-})
-
-// del(['**/*.html', 'css/*.css'], {force: true}, cb)
+});
 
 /* gulp commands */
 
