@@ -6,6 +6,7 @@ uglify = require('gulp-uglify'),
 rename = require('gulp-rename'),
 concat = require('gulp-concat'),
 maps = require('gulp-sourcemaps'),
+mamp = require('gulp-mamp'),
 browsersync = require('browser-sync').create(),
 del = require('del');
 
@@ -101,20 +102,33 @@ gulp.task('browserSync', function() {
 
 });
 
+/* mamp startup for wordpress & broswersync functionality */
+
+var options = {};
+
+gulp.task('start', function(cb){
+    mamp(options, 'start', cb);
+});
+ 
+gulp.task('stop', function(cb){
+    mamp(options, 'stop', cb);
+});
+ 
+gulp.task('mamp', ['start']);
+
 // browsersync for wp 
 
 // browser-sync task for starting the server.
-gulp.task('browsersync-wp', function() {
+gulp.task('browsersync-wp', ['mamp'], function() {
     //watch files
     var files = [
-        '../wp-content/themes/spc-theme/**/.*.*'
+        '../wp-content/themes/spc-theme/**/*.*'
     ];
  
     //initialize browsersync
     browsersync.init(files, {
     //browsersync with a php server
-    proxy: "http://localhost:8888/wordpress-spc",
-    notify: false
+    proxy: 'localhost:8888'
     });
 });
 
@@ -139,13 +153,14 @@ gulp.task("production", ["minifyScripts","minifyCss",'moveImgs','moveFonts'], fu
             .pipe(gulp.dest('dist'));
 });
 
+
 /* adding all to WP theme browsersync too */
 
 gulp.task('serve-wp',['browsersync-wp']);
 
 gulp.task("wordpress", ["minifyScripts","addPrefix",'moveImgs','moveFonts'], function() {
     return gulp.src(['src/*.php'])
-            .pipe(gulp.dest('../wp-content/themes/spc-theme'));
+            .pipe(gulp.dest('../wp-content/themes/spc-theme/'));
 });
 
 gulp.task("wp", ["clean", "wordpress"], function(){
