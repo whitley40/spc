@@ -142,6 +142,11 @@
   padding:0px 0px 0px;
   border-bottom:50px $spc-white solid;
   padding-top:0px;
+  h3{
+    a{
+      @include font-size(12px);
+    }
+  }
   .case-detail {
     padding:40px 20px 40px;
     //large screen upwards
