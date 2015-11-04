@@ -77,8 +77,7 @@ gulp.task('moveVids', function() {
 /* move php across */
 
 gulp.task('movePHP', function() {
-    return gulp.src('src/**/*.php')
-    return gulp.src('src/**/*.jpg')
+    return gulp.src(['src/**/*.php','src/**/*.jpg'])
     .pipe(gulp.dest('../wp-content/themes/spc-theme/'));
 });
 
