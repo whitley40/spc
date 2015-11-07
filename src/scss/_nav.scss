@@ -233,6 +233,16 @@
       flex-direction:row;
     } 
   }
+  li.current-menu-item a{
+      background:$spc-red;
+      color: $spc-white;
+      //medium screen upwards
+      @include bp-medium {
+        background:$spc-white;
+        color:$spc-darkblue;
+        border-bottom:5px $spc-red solid;
+    }
+  }
   a {
     display: block;
     padding: 20px;
@@ -250,16 +260,6 @@
     //large screen upwards
     @include bp-large {
       margin:0px 12px;
-    }
-    &.selected{
-      background:$spc-red;
-      color: $spc-white;
-      //medium screen upwards
-      @include bp-medium {
-        background:$spc-white;
-        color:$spc-darkblue;
-        border-bottom:5px $spc-red solid;
-      }
     }
     &:hover{
       //medium screen upwards
