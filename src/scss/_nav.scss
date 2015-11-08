@@ -28,7 +28,7 @@
   }
 
   .nav-social {
-    display: flex;
+    display: none;
     flex-direction: row;
     justify-content:center;
     @include font-size(20px);
@@ -268,6 +268,25 @@
         color:$spc-darkblue;
         border-bottom:5px $spc-red solid;
       }
+    }
+  }
+}
+
+// wordpress unique styles
+
+.home{
+  .contact-bar{
+    display:none;
+  }
+  .contact-home-bar{
+    display:flex;
+  }
+  .social-home{
+    display:flex;
+  }
+  .nav-bar{
+    h1{
+      display:none;
     }
   }
 }

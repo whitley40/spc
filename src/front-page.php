@@ -22,7 +22,7 @@
     <h1><a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/imgs/SPC-logo.svg" /><span>Simpson Performance Consulting</span></a></h1>
     <h2><?php the_field('banner_title'); ?></h2>
     <p><?php the_field('banner_intro'); ?></p>
-    <a href="benefits.html" class="main-cta"><?php the_field('banner_cta'); ?><span class="icon-chevron-right"></span></a>
+    <a href="<?php bloginfo('url'); ?>/<?php the_field('banner_cta_link'); ?>" class="main-cta"><?php the_field('banner_cta'); ?><span class="icon-chevron-right"></span></a>
 
     </div>
 
@@ -30,7 +30,7 @@
 
   <!-- ############ Contact Bar ############ -->
   
-  <section class="contact-bar section-blue">
+  <section class="contact-bar contact-home-bar section-blue">
 
   <div class="content-container">
 
