@@ -1,4 +1,12 @@
-//just some simple jq!
+//adding a no conflict wrapper
+
+jQuery(document).ready(function($) {
+    // Inside of this function, $() will work as an alias for jQuery()
+    // and other libraries also using $ will not be accessible under this shortcut
+
+
+
+    //just some simple jq!
 
 /**
  * jQuery.fastClick.js
@@ -161,5 +169,7 @@ function fix()
 }
 
 //ontouchend="this.onclick=fix"
+
+});
 
 

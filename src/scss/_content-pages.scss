@@ -3,9 +3,15 @@
 //areas of expertise
 
 .aoe-banner {
-  background: url('../imgs/banners/banners-main-expertise.jpg') $spc-darkblue;
+  background: url('imgs/banners/banners-main-expertise.jpg') $spc-darkblue;
   background-size: cover;
   background-position: center;
+  //medium screen upwards
+    @include bp-medium {
+      background: url('imgs/banners/banners-dt-main-expertise.jpg') $spc-darkblue;
+      background-size: cover;
+    }
+      
 }
 
 .aoe-two {
@@ -15,12 +21,12 @@
 //training
 
 .training-banner {
-  background: url('../imgs/banners/banners-main-training.jpg') $spc-darkblue;
+  background: url('imgs/banners/banners-main-training.jpg') $spc-darkblue;
   background-size: cover;
   background-position: center;
   //medium screen upwards
     @include bp-medium {
-      background: url('../imgs/banners/banners-dt-main-training.jpg') $spc-darkblue;
+      background: url('imgs/banners/banners-dt-main-training.jpg') $spc-darkblue;
       background-size: cover;
       background-position: center;
     }
@@ -29,12 +35,12 @@
 //benefits
 
 .benefits-banner {
-  background: url('../imgs/banners/banners-main-benefits2.jpg') $spc-darkblue;
+  background: url('imgs/banners/banners-main-benefits2.jpg') $spc-darkblue;
   background-size: cover;
   background-position: center;
   //medium screen upwards
     @include bp-medium {
-      background: url('../imgs/banners/banners-dt-main-benefits2.jpg') $spc-darkblue;
+      background: url('imgs/banners/banners-dt-main-benefits2.jpg') $spc-darkblue;
       background-size: cover;
       background-position: center;
     }
@@ -43,12 +49,12 @@
 //the science
 
 .science-banner {
-  background: url('../imgs/banners/banners-main-science.jpg') $spc-darkblue;
+  background: url('imgs/banners/banners-main-science.jpg') $spc-darkblue;
   background-size: cover;
   background-position: center;
   //medium screen upwards
     @include bp-medium {
-      background: url('../imgs/banners/banners-dt-main-science.jpg') $spc-darkblue;
+      background: url('imgs/banners/banners-dt-main-science.jpg') $spc-darkblue;
       background-size: cover;
       background-position: center;
     }
@@ -117,25 +123,62 @@
             }
           }
     }
+    .split-content{
+      li{
+          &:before{
+        display:block;
+        padding:5px 10px 0px 0px;
+        @include font-size(8px);
+        content: "c";
+        font-family: "spc-icons" !important;
+        font-style: normal !important;
+        font-weight: normal !important;
+        font-variant: normal !important;
+        text-transform: none !important;
+        speak: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+      }
+        }
+
+    }
 }
 
 
 //case studies
 
 .case-studies-banner {
-  background: url('../imgs/banners/banners-main-case-studies.jpg') $spc-darkblue;
+  background: url('imgs/banners/banners-main-case-studies.jpg') $spc-darkblue;
   background-size: cover;
   background-position: center;
   //medium screen upwards
     @include bp-medium {
-      background: url('../imgs/banners/banners-dt-main-case-studies.jpg') $spc-darkblue;
+      background: url('imgs/banners/banners-dt-main-case-studies.jpg') $spc-darkblue;
       background-size: cover;
       background-position: center;
     }
 }
 
+
+
 .case-studies-one {
   padding-bottom:0px;
+  li{
+          &:before{
+        display:block;
+        padding:5px 10px 0px 0px;
+        @include font-size(8px);
+        content: "c";
+        font-family: "spc-icons" !important;
+        font-style: normal !important;
+        font-weight: normal !important;
+        font-variant: normal !important;
+        text-transform: none !important;
+        speak: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+      }
+        }
   }
 
 .case-studies-two {
@@ -159,38 +202,17 @@
     flex-direction:column;
     width:100%;
     min-height:400px;
-    &.matt{
-      background: url('../imgs/banners/banners-testimonial-matt.jpg') $spc-red;
-      background-size: cover;
-      background-position: center;
-        //medium screen upwards
-        @include bp-medium {
-          background: url('../imgs/banners/banners-testimonial-matt-dt.jpg') $spc-darkblue;
-          background-size: cover;
-          background-position: center;
-        }
+  }
+  .story-head {
+    display:flex;
+    @include bp-medium {
+      display:none;
     }
-    &.avi{
-      background: url('../imgs/banners/banners-testimonial-avi.jpg') $spc-red;
-      background-size: cover;
-      background-position: center;
-      //medium screen upwards
-        @include bp-medium {
-          background: url('../imgs/banners/banners-testimonial-avi-dt.jpg') $spc-darkblue;
-          background-size: cover;
-          background-position: center;
-        }
-    }
-    &.dan{
-      background: url('../imgs/banners/banners-testimonial-daniel.jpg') $spc-red;
-      background-size: cover;
-      background-position: center;
-      //medium screen upwards
-        @include bp-medium {
-          background: url('../imgs/banners/banners-testimonial-daniel-dt.jpg') $spc-darkblue;
-          background-size: cover;
-          background-position: center;
-        }
+  }
+  .story-head-dt {
+    display:none;
+    @include bp-medium {
+      display:flex;
     }
   }
 }
@@ -198,12 +220,12 @@
 //our story
 
 .our-story-banner {
-  background: url('../imgs/banners/banners-main-our-story.jpg') $spc-darkblue;
+  background: url('imgs/banners/banners-main-our-story.jpg') $spc-darkblue;
   background-size: cover;
   background-position: center;
   //medium screen upwards
     @include bp-medium {
-      background: url('../imgs/banners/banners-dt-main-our-story.jpg') $spc-darkblue;
+      background: url('imgs/banners/banners-dt-main-our-story.jpg') $spc-darkblue;
       background-size: cover;
       background-position: center;
     }
@@ -230,7 +252,7 @@
 
 .contact-banner {
   flex-direction: column-reverse;
-  background: url('../imgs/banners/banners-main-contact2.jpg') $spc-darkblue;
+  background: url('imgs/banners/banners-main-contact2.jpg') $spc-darkblue;
   background-size: cover;
   background-position: center;
   min-height:150px;
@@ -239,7 +261,7 @@
   }
   //medium screen upwards
     @include bp-medium {
-      background: url('../imgs/banners/banners-dt-main-contact2.jpg') $spc-darkblue;
+      background: url('imgs/banners/banners-dt-main-contact2.jpg') $spc-darkblue;
       background-size: cover;
       background-position: center;
     }

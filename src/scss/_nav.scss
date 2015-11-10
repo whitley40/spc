@@ -28,7 +28,7 @@
   }
 
   .nav-social {
-    display: flex;
+    display: none;
     flex-direction: row;
     justify-content:center;
     @include font-size(20px);
@@ -233,6 +233,16 @@
       flex-direction:row;
     } 
   }
+  li.current-menu-item a{
+      background:$spc-red;
+      color: $spc-white;
+      //medium screen upwards
+      @include bp-medium {
+        background:$spc-white;
+        color:$spc-darkblue;
+        border-bottom:5px $spc-red solid;
+    }
+  }
   a {
     display: block;
     padding: 20px;
@@ -251,16 +261,6 @@
     @include bp-large {
       margin:0px 12px;
     }
-    &.selected{
-      background:$spc-red;
-      color: $spc-white;
-      //medium screen upwards
-      @include bp-medium {
-        background:$spc-white;
-        color:$spc-darkblue;
-        border-bottom:5px $spc-red solid;
-      }
-    }
     &:hover{
       //medium screen upwards
       @include bp-medium {
@@ -268,6 +268,25 @@
         color:$spc-darkblue;
         border-bottom:5px $spc-red solid;
       }
+    }
+  }
+}
+
+// wordpress unique styles
+
+.home{
+  .contact-bar{
+    display:none;
+  }
+  .contact-home-bar{
+    display:flex;
+  }
+  .social-home{
+    display:flex;
+  }
+  .nav-bar{
+    h1{
+      display:none;
     }
   }
 }

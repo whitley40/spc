@@ -13,7 +13,7 @@ del = require('del');
 /* compiling the sass (with maps) */
 
 gulp.task('compileSass', function() {
-    return gulp.src('src/scss/style.scss')
+    return gulp.src('src/scss/styles.scss')
     .pipe(sass())
     .pipe(rename('style.css'))
     .pipe(gulp.dest('../wp-content/themes/spc-theme/'));
@@ -25,15 +25,9 @@ gulp.task('compileSass', function() {
 gulp.task('addPrefix', ['compileSass'], function() {
     return gulp.src('../wp-content/themes/spc-theme/style.css')
     .pipe(autoprefixer())
+    //.pipe(minifycss()); 
     .pipe(gulp.dest('../wp-content/themes/spc-theme/'));
 });
-
-/* minify the css */
-
-gulp.task('minifyCss', ['addPrefix'], function(){
-    return gulp.src("../wp-content/themes/spc-theme/style.css")
-    .pipe(minifycss()); 
-})
 
 /* concat the javascripts */
 
@@ -60,6 +54,13 @@ gulp.task('moveImgs', function() {
     .pipe(gulp.dest('../wp-content/themes/spc-theme/imgs'));
 });
 
+/* move any new css across */
+
+gulp.task('moveCss', function() {
+    return gulp.src('src/*.css')
+    .pipe(gulp.dest('../wp-content/themes/spc-theme/'));
+});
+
 /* move fonts across */
 
 gulp.task('moveFonts', function() {
@@ -77,7 +78,7 @@ gulp.task('moveVids', function() {
 /* move php across */
 
 gulp.task('movePHP', function() {
-    return gulp.src('src/**/*.php')
+    return gulp.src(['src/**/*.php','src/**/*.jpg'])
     .pipe(gulp.dest('../wp-content/themes/spc-theme/'));
 });
 
@@ -109,7 +110,7 @@ gulp.task('browsersync-wp', ['mamp'], function() {
     proxy: 'localhost:8888'
     });
 
-    gulp.watch("src/scss/*.scss", ['minifyCss']);
+    gulp.watch("src/scss/*.scss", ['addPrefix']);
     gulp.watch('src/js/**/*.js', ['minifyScripts']);
     gulp.watch('src/*.php', ['movePHP']);
     gulp.watch(["../wp-content/themes/spc-theme/**/*.*"]).on('change', browsersync.reload);
@@ -129,7 +130,7 @@ gulp.task('clean', function(){
 
 // gulp.task('serve-wp',['browsersync-wp']);
 
-gulp.task("wordpress", ["minifyScripts","minifyCss",'moveImgs','moveFonts', 'movePHP', 'moveVids']);
+gulp.task("wordpress", ["minifyScripts", 'addPrefix','moveImgs', 'moveCss' ,'moveFonts', 'movePHP', 'moveVids']);
 
 /* gulp default */
 

@@ -104,7 +104,7 @@ section {
 		display: flex;
 		flex-direction: column;
 		padding:0px;
-		margin:10px 0px 40px 0px;
+		margin:10px 0px 20px 0px;
 		&.split{
 			//medium screen upwards
 		    @include bp-medium {
@@ -118,16 +118,28 @@ section {
 		    @include bp-medium {
 		    	padding-right:80px;
 		    }
+        li{
+          &:before{
+        display:block;
+        padding:5px 10px 0px 0px;
+        @include font-size(8px);
+        content: "c";
+        font-family: "spc-icons" !important;
+        font-style: normal !important;
+        font-weight: normal !important;
+        font-variant: normal !important;
+        text-transform: none !important;
+        speak: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+      }
+        }
 		}
 		li{
 			@include font-size(18px);
 			display: flex;
 			flex-direction: row;
 			padding:5px;
-			span {
-				@include font-size(8px);
-				margin: 5px 20px 0px 0px;
-			}
 		}
 	}
 }
