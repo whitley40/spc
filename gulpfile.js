@@ -7,6 +7,7 @@ rename = require('gulp-rename'),
 concat = require('gulp-concat'),
 maps = require('gulp-sourcemaps'),
 mamp = require('gulp-mamp'),
+mozjpeg = require('imagemin-mozjpeg'), //jpeg optimiser
 browsersync = require('browser-sync').create(),
 del = require('del');
 
@@ -51,6 +52,7 @@ gulp.task("minifyScripts", ["concatScripts"],  function(){
 
 gulp.task('moveImgs', function() {
     return gulp.src('src/imgs/**/*.*')
+    .pipe(mozjpeg({quality: '75'})())
     .pipe(gulp.dest('../wp-content/themes/spc-theme/imgs'));
 });
 
