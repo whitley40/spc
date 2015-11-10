@@ -71,8 +71,20 @@
        <?php $project = strip_tags(get_the_term_list( $post->ID, 'project-type', '', ' ', '')); ?>
 
     <section class="case-studies-two section-blue">
-  <header></header>
-  <header></header>
+
+    <!-- &.avi{
+      background: url('imgs/banners/banners-testimonial-avi.jpg') $spc-red;
+      background-size: cover;
+      background-position: center;
+      //medium screen upwards
+        @include bp-medium {
+          background: url('imgs/banners/banners-testimonial-avi-dt.jpg') $spc-darkblue;
+          background-size: cover;
+          background-position: center;
+        }
+    } -->
+  <header class="story-head" style="background: url('<?php the_field('persons_image_mob'); ?>') center #15212d; background-size: cover;"></header>
+  <header class="story-head-dt" style="background: url('<?php the_field('persons_image'); ?>') center #15212d; background-size: cover;"></header>
 
   <div class="case-detail">
   <div class="content-container">

@@ -202,38 +202,17 @@
     flex-direction:column;
     width:100%;
     min-height:400px;
-    &.matt{
-      background: url('imgs/banners/banners-testimonial-matt.jpg') $spc-red;
-      background-size: cover;
-      background-position: center;
-        //medium screen upwards
-        @include bp-medium {
-          background: url('imgs/banners/banners-testimonial-matt-dt.jpg') $spc-darkblue;
-          background-size: cover;
-          background-position: center;
-        }
+  }
+  .story-head {
+    display:flex;
+    @include bp-medium {
+      display:none;
     }
-    &.avi{
-      background: url('imgs/banners/banners-testimonial-avi.jpg') $spc-red;
-      background-size: cover;
-      background-position: center;
-      //medium screen upwards
-        @include bp-medium {
-          background: url('imgs/banners/banners-testimonial-avi-dt.jpg') $spc-darkblue;
-          background-size: cover;
-          background-position: center;
-        }
-    }
-    &.dan{
-      background: url('imgs/banners/banners-testimonial-daniel.jpg') $spc-red;
-      background-size: cover;
-      background-position: center;
-      //medium screen upwards
-        @include bp-medium {
-          background: url('imgs/banners/banners-testimonial-daniel-dt.jpg') $spc-darkblue;
-          background-size: cover;
-          background-position: center;
-        }
+  }
+  .story-head-dt {
+    display:none;
+    @include bp-medium {
+      display:flex;
     }
   }
 }
