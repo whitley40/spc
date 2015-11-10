@@ -54,6 +54,13 @@ gulp.task('moveImgs', function() {
     .pipe(gulp.dest('../wp-content/themes/spc-theme/imgs'));
 });
 
+/* move any new css across */
+
+gulp.task('moveCss', function() {
+    return gulp.src('src/*.css')
+    .pipe(gulp.dest('../wp-content/themes/spc-theme/'));
+});
+
 /* move fonts across */
 
 gulp.task('moveFonts', function() {
@@ -123,7 +130,7 @@ gulp.task('clean', function(){
 
 // gulp.task('serve-wp',['browsersync-wp']);
 
-gulp.task("wordpress", ["minifyScripts", 'addPrefix','moveImgs','moveFonts', 'movePHP', 'moveVids']);
+gulp.task("wordpress", ["minifyScripts", 'addPrefix','moveImgs', 'moveCss' ,'moveFonts', 'movePHP', 'moveVids']);
 
 /* gulp default */
 

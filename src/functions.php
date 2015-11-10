@@ -19,12 +19,12 @@ function register_theme_menus() {
 }
 add_action('init', 'register_theme_menus');
 
+
+
 //spc styling
 
 function spc_theme_styles() {
-
   wp_enqueue_style('style_css', get_template_directory_uri() . '/style.css');
-
 }
 
 add_action( 'wp_enqueue_scripts', 'spc_theme_styles');
@@ -81,4 +81,10 @@ add_filter('upload_mimes', 'cc_mime_types');
 
 
 
+
 ?>
+
+
+
+
+

@@ -71,7 +71,8 @@
        <?php $project = strip_tags(get_the_term_list( $post->ID, 'project-type', '', ' ', '')); ?>
 
     <section class="case-studies-two section-blue">
-  <header class="matt"></header>
+  <header></header>
+  <header></header>
 
   <div class="case-detail">
   <div class="content-container">
