@@ -25,7 +25,7 @@
     <div class="page-description">
     <div class="content-container">
     <p><q><?php the_field('banner_quote'); ?> </q> - <?php the_field('banner_quote_name'); ?></p>
-    <a href="<?php bloginfo('url'); ?>/<?php the_field('banner_cta_link'); ?>" class="main-cta"><?php the_field('banner_cta'); ?><span class="icon-chevron-right"></span></a>
+    <a href="<?php the_field('banner_cta_link'); ?>" class="main-cta"><?php the_field('banner_cta'); ?><span class="icon-chevron-right"></span></a>
     </div>
     </div>
 
@@ -62,7 +62,7 @@
     </div>
   </ul>
 
-  <a href="<?php bloginfo('url'); ?>/<?php the_field('next_cta_link'); ?>" class="main-cta"><?php the_field('next_cta'); ?><span class="icon-chevron-right"></span></a>
+  <a href="<?php the_field('next_cta_link'); ?>" class="main-cta"><?php the_field('next_cta'); ?><span class="icon-chevron-right"></span></a>
 
   </div>
 

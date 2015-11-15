@@ -300,11 +300,13 @@
     display:flex;
     flex-direction: column;
     label{
-      position:absolute;
-      top:-100px;
-      left:-100px;
+      display:none;
+      span{
+        display:none;
+      }
     }
-    input, textarea{
+    input[type='text'], input[type='email'], textarea{
+      width:100%;
       background:$spc-grey;
       padding:15px 20px;
       margin:0px 0px 25px;

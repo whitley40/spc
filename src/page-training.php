@@ -25,7 +25,7 @@
     <div class="page-description">
      <div class="content-container">
     <p><q>“<?php the_field('banner_quote'); ?></q> - by <?php the_field('banner_quote_name'); ?></p>
-    <a href="<?php bloginfo('url'); ?>/<?php the_field('banner_cta_link'); ?>" class="main-cta"><?php the_field('banner_cta'); ?><span class="icon-chevron-right"></span></a>
+    <a href="<?php the_field('banner_cta_link'); ?>" class="main-cta"><?php the_field('banner_cta'); ?><span class="icon-chevron-right"></span></a>
     </div>
     </div>
 
@@ -52,11 +52,11 @@
    <div class="content-container">
 
 
-<div class="video">
+<!-- <div class="video">
       <video controls>
         <source src="<?php the_field('video_link'); ?>" type="video/mp4">
       </video>
-  </div>
+  </div> -->
 
   <h2><?php the_field('list_intro'); ?></h2>
   <ul class="split">
@@ -68,7 +68,7 @@
     </div>
   </ul>
 
-  <a href="<?php bloginfo('url'); ?>/<?php the_field('next_cta_link'); ?>" class="main-cta"><?php the_field('next_cta'); ?><span class="icon-chevron-right"></span></a>
+  <a href="<?php the_field('next_cta_link'); ?>" class="main-cta"><?php the_field('next_cta'); ?><span class="icon-chevron-right"></span></a>
 
   </div>
 

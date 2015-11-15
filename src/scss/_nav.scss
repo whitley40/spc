@@ -4,6 +4,7 @@
 //main bar
 
 .nav-bar{
+  width:100%; //added to stop jumping in safari
   height:80px;
   display: flex;
   flex-direction: row;
@@ -167,6 +168,7 @@
 
 .mob-on {
   position: fixed;
+  top: 12px;
   right:20px;
   box-shadow :none;
   background-color: #fc4349;

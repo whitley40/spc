@@ -2,7 +2,7 @@
 
 //Main CTA
 
-.main-cta {
+.main-cta, input[type='submit'] {
 	align-self:flex-start;
 	display:flex;
 	flex-direction:row;
@@ -16,8 +16,10 @@
 	font-size: 18px;
 	text-transform: uppercase;
 	padding: 15px 20px;
+	border:none;
 	border-radius: $spc-border-radius;
 	transition: all 0.2s ease-in;
+	font-family:$font-regular;
 	span {
 		font-size: 15px;
 		margin:4px 0px 0px 15px;

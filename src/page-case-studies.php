@@ -27,7 +27,7 @@
     <div class="page-description">
     <div class="content-container">
     <p><q><?php the_field('banner_quote'); ?></q> - <?php the_field('banner_quote_name'); ?></p>
-    <a href="<?php bloginfo('url'); ?>/<?php the_field('banner_cta_link'); ?>" class="main-cta"><?php the_field('banner_cta'); ?><span class="icon-chevron-right"></span></a>
+    <a href="<?php the_field('banner_cta_link'); ?>" class="main-cta"><?php the_field('banner_cta'); ?><span class="icon-chevron-right"></span></a>
     </div>
     </div>
 
@@ -64,11 +64,7 @@
     ?>
 
     <?php if( $query->have_posts() ): while( $query->have_posts() ) : $query->the_post(); ?>
-
-      <!-- this gets the featured image object and stores the array in a variable - its then echoed out in the background -->
-      <?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), '', false, '' ); ?>
-      <!-- get the category type for project posts -->
-       <?php $project = strip_tags(get_the_term_list( $post->ID, 'project-type', '', ' ', '')); ?>
+    
 
     <section class="case-studies-two section-blue">
 

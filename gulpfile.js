@@ -52,7 +52,7 @@ gulp.task("minifyScripts", ["concatScripts"],  function(){
 
 gulp.task('moveImgs', function() {
     return gulp.src('src/imgs/**/*.*')
-    .pipe(mozjpeg({quality: '75'})())
+    //.pipe(mozjpeg({quality: '75'})())
     .pipe(gulp.dest('../wp-content/themes/spc-theme/imgs'));
 });
 

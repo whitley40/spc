@@ -1,6 +1,6 @@
 <?php
 /*
-  Template Name: Case Studies
+  Template Name: Contact
 */
 ?>
 <?php get_header(); ?>
@@ -34,23 +34,7 @@
 
   <h2>How can we help?</h2>
 
-  <form>
-
-  <label>Fullname</label>
-  <input placeholder="Fullname" type="text">
-
-  <label>Email</label>
-  <input placeholder="Email Address" type="text">
-
-  <label>Phone No.</label>
-  <input placeholder="Phone Number" type="text">
-
-  <label>Message</label>
-  <textarea rows="10" placeholder="Message"></textarea>
-
-  <a class="main-cta">Submit Message<span class="icon-chevron-right"></span></a>
-
-  </form>
+  <?php the_field('contact_form'); ?>
 
   </section>
 
