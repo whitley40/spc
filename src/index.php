@@ -1,5 +1,5 @@
 <?php get_header(); ?>
 
-<h1>Simpson Perfomance Consulting welcome you to their bespoke theme and stuff.</h1>
+<p>Simpson Perfomance Consulting. Sorry we couldn't find the correct page for you, click on the navigation above to try again!</p>
 
 <?php get_footer(); ?>
