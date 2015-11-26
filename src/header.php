@@ -14,7 +14,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/imgs/spc-fav.png" />  
   <title><?php wp_title(); ?></title>
-  <link href="https://fontastic.s3.amazonaws.com/hzTWcwQEtJUKbecWL3w6K4/icons.css" rel="stylesheet">
+  <link href="https://file.myfontastic.com/hzTWcwQEtJUKbecWL3w6K4/icons.css" rel="stylesheet">
   <?php wp_head(); ?>
 
 </head>
