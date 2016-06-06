@@ -46,12 +46,6 @@
 
   <div class="content-container">
 
-  <div class="portal-collection">
-  <img class="portal" src='<?php the_field('image_one'); ?>' />
-  <img class="portal" src='<?php the_field('image_two'); ?>' />
-  <img class="portal" src='<?php the_field('image_three'); ?>' />
-  </div>
-
   <h2><?php the_field('list_intro'); ?></h2>
   <ul class="split">
     <div class="split-list">

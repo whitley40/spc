@@ -36,7 +36,7 @@
   <section class="science-one">
   <div class="content-container">
     <h2><?php the_field('intro_title'); ?></h2>
-    <p>S<?php the_field('intro_one'); ?></p>
+    <p><?php the_field('intro_one'); ?></p>
     </div>
   </section>
 
@@ -68,7 +68,6 @@
   <div class="content-container">
   <header>
     <h2><?php the_field('credentials_title'); ?></h2>
-    <img class="portal" src='<?php the_field('credentials_image'); ?>' />
     </header>
     </div>
     </section>

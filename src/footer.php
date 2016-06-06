@@ -6,7 +6,7 @@
   <div class="content-container">
 
     <a href="mailto:info@simpsonperformanceconsulting.com" class="link-icon"><span class="icon-email-envelope"></span><span class="big-email">info@simpsonperformanceconsulting.com</span></a>
-    <a  href="tel:+1-800-555-5555" class="link-icon"><span class="icon-mobile"></span> +1 800 555 5555</a>
+    <a  href="tel:786-540-4772" class="link-icon"><span class="icon-mobile"></span>786-540-4SPC</a>
 
     <nav class="nav-social">
         <ul>
@@ -25,7 +25,7 @@
 
   <footer>
     
-    <p><small>&copy; Copyright <?php echo date('Y'); ?>. Simpson Performance Consulting. All rights reserved.</small></p>
+    <p><small>&copy; Copyright <?php echo date('Y'); ?>. Simpson Performance Consulting LLC. All rights reserved.</small></p>
     
   </footer>
 

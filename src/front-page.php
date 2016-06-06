@@ -35,7 +35,7 @@
   <div class="content-container">
 
     <a href="mailto:info@simpsonperformanceconsulting.com" class="link-icon"><span class="icon-email-envelope"></span><span class="big-email">info@simpsonperformanceconsulting.com</span></a>
-    <a  href="tel:+1-800-555-5555" class="link-icon"><span class="icon-mobile"></span> +1 800 555 5555</a>
+    <a  href="tel:786-540-4772" class="link-icon"><span class="icon-mobile"></span>786-540-4SPC</a>
 
     <nav class="nav-social hidden">
       <ul>
@@ -65,20 +65,6 @@
 
   </section>
 
-  <!-- ############ Homepage Section Two ############ -->
-
-  <section class="homepage-two  section-blue">
-
-  <div class="content-container">
-
-    <img class="portal" src='<?php the_field('home_two_image'); ?>' />
-    <h2><?php the_field('home_two_title'); ?></h2>
-    <p><?php the_field('home_two_intro'); ?></p>
-    <a href="<?php bloginfo('url'); ?>/<?php the_field('home_two_link'); ?>" class="main-cta"><?php the_field('home_two_cta'); ?><span class="icon-chevron-right"></span></a>
-
-    </div>
-
-  </section>
 
 
 

@@ -148,12 +148,12 @@
 //case studies
 
 .case-studies-banner {
-  background: url('imgs/banners/banners-main-case-studies.jpg') $spc-darkblue;
+  background: url('imgs/banners/banners-main-case-studies3.jpg') $spc-darkblue;
   background-size: cover;
   background-position: center;
   //medium screen upwards
     @include bp-medium {
-      background: url('imgs/banners/banners-dt-main-case-studies.jpg') $spc-darkblue;
+      background: url('imgs/banners/banners-dt-main-case-studies3.jpg') $spc-darkblue;
       background-size: cover;
       background-position: center;
     }
