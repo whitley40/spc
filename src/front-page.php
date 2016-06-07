@@ -36,6 +36,7 @@
 
     <a href="mailto:info@simpsonperformanceconsulting.com" class="link-icon"><span class="icon-email-envelope"></span><span class="big-email">info@simpsonperformanceconsulting.com</span></a>
     <a  href="tel:786-540-4772" class="link-icon"><span class="icon-mobile"></span>786-540-4SPC</a>
+    <a  href="http://www.twitter.com/SportPsychDunc" target="_blank" class="link-icon"><span class="icon-twitter"></span></a>
 
     <nav class="nav-social hidden">
       <ul>

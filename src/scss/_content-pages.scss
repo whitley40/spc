@@ -148,12 +148,12 @@
 //case studies
 
 .case-studies-banner {
-  background: url('imgs/banners/banners-main-case-studies3.jpg') $spc-darkblue;
+  background: url('imgs/banners/banners-main-contact2.jpg') $spc-darkblue;
   background-size: cover;
   background-position: center;
   //medium screen upwards
     @include bp-medium {
-      background: url('imgs/banners/banners-dt-main-case-studies3.jpg') $spc-darkblue;
+      background: url('imgs/banners/banners-dt-main-contact2.jpg') $spc-darkblue;
       background-size: cover;
       background-position: center;
     }
@@ -252,7 +252,7 @@
 
 .contact-banner {
   flex-direction: column-reverse;
-  background: url('imgs/banners/banners-main-contact2.jpg') $spc-darkblue;
+  background: url('imgs/banners/banners-main-logo.png') $spc-darkblue;
   background-size: cover;
   background-position: center;
   min-height:150px;
@@ -261,7 +261,7 @@
   }
   //medium screen upwards
     @include bp-medium {
-      background: url('imgs/banners/banners-dt-main-contact2.jpg') $spc-darkblue;
+      background: url('imgs/banners/banners-dt-main-logo.png') $spc-darkblue;
       background-size: cover;
       background-position: center;
     }

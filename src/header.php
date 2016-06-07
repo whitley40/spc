@@ -133,10 +133,10 @@
 
   <nav class="nav-social social-home">
         <ul>
-          <li><a class="icon-twitter" href="#" target="_blank"><span>Twitter</span></a></li>
-          <li><a class="icon-facebook" href="#" target="_blank"><span>Facebook</span></a></li>
+        <!--  <li><a class="icon-twitter" href="http://www.twitter.com/SportPsychDunc" target="_blank"><span>Twitter</span></a></li>
+           <li><a class="icon-facebook" href="#" target="_blank"><span>Facebook</span></a></li>
           <li><a class="icon-vimeo" href="#" target="_blank"><span>Vimeo</span></a></li>
-          <li><a class="icon-youtube-alt" href="#" target="_blank"><span>Youtube</span></a></li>
+          <li><a class="icon-youtube-alt" href="#" target="_blank"><span>Youtube</span></a></li> -->
         </ul>
       </nav>
 
@@ -146,10 +146,10 @@
 
       <nav class="nav-social">
         <ul>
-          <li><a class="icon-twitter" href="#" target="_blank"><span>Twitter</span></a></li>
+         <!--  <li><a class="icon-twitter" href="http://www.twitter.com/SportPsychDunc" target="_blank"><span>Twitter</span></a></li>
           <li><a class="icon-facebook" href="#" target="_blank"><span>Facebook</span></a></li>
           <li><a class="icon-vimeo" href="#" target="_blank"><span>Vimeo</span></a></li>
-          <li><a class="icon-youtube-alt" href="#" target="_blank"><span>Youtube</span></a></li>
+          <li><a class="icon-youtube-alt" href="#" target="_blank"><span>Youtube</span></a></li> -->
         </ul>
       </nav>
 
