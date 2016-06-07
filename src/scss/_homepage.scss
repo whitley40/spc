@@ -44,6 +44,9 @@
 		    	width: 250px;
 		    	margin-left:-10px;
 		    }
+		    @include bp-large {
+		    	width: 350px;
+		    }
 		}
 		span {
 			display: none;

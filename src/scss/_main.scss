@@ -36,9 +36,13 @@ body * {
 p {
 	font-family:$font-light;
 	@include font-size(18px);
+  @include line-height(28px);
 	color: $spc-darkblue;
-	line-height: 24px;
 	margin: 0px 0px 20px;
+  @include bp-large {
+      @include font-size(24px);
+      @include line-height(34px);
+  }
 	small {
 		font-size: 12px;
 	}
@@ -50,6 +54,10 @@ p {
 		text-align:center;
 		margin:40px auto 40px;
 		max-width:900px;
+    @include bp-large {
+      @include font-size(30px);
+      @include line-height(38px);
+  }
 	}
 }
 
@@ -69,6 +77,9 @@ h2  {
 	line-height: 45px;
 	margin: 10px 0px 20px;
 	letter-spacing:-0.02rem;
+  @include bp-large {
+      @include font-size(40px);
+  }
 }
 
 h3  {
@@ -132,6 +143,9 @@ section {
         speak: none;
         line-height: 1;
         -webkit-font-smoothing: antialiased;
+        @include bp-large {
+         padding:7px 10px 0px 0px;
+        }
       }
         }
 		}
@@ -140,6 +154,9 @@ section {
 			display: flex;
 			flex-direction: row;
 			padding:5px;
+      @include bp-large {
+          @include font-size(24px);
+        }
 		}
 	}
 }
@@ -225,6 +242,7 @@ section {
         }
 		//large screen upwards
     @include bp-large {
+      @include font-size(55px);
     	//margin:30px 0px 30px 0px;
     }
 	}
@@ -273,6 +291,10 @@ section {
 	height: 195px;
 	align-self: center;
   margin-bottom:20px;
+  @include bp-large {
+      width: 240px;
+      height: 240px;
+    }
 }
 
 .portal-collection{
@@ -356,6 +378,7 @@ section {
 		//medium screen upwards
 	    @include bp-medium {
 	    	padding-right:20px;
+        padding-top: 10px;
 	    }
 	}
 	.nav-social {

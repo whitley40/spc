@@ -262,6 +262,7 @@
     //large screen upwards
     @include bp-large {
       margin:0px 12px;
+      @include font-size(16px);
     }
     &:hover{
       //medium screen upwards

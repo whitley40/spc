@@ -30,13 +30,7 @@
 
   <!-- ############ Contact- white  - message ############ -->
 
-  <section class="contact-one">
 
-  <h2>How can we help?</h2>
-
-  <?php the_field('contact_form'); ?>
-
-  </section>
 
    <!-- ############ Contact- white  - message ############ -->
 
@@ -46,18 +40,15 @@
 
   <div class="contacts">
 
-      <a href="mailto:info@simpsonperformanceconsulting.com" class="link-icon"><span class="icon-email-envelope"></span> <span>info@simpsonperformanceconsulting.com</span></a>
-        <a  href="tel:786-540-4772" class="link-icon"><span class="icon-mobile"></span><span>786-540-4SPC</span></a>
-        <a  href="http://www.twitter.com" class="link-icon"><span class="icon-twitter"></span> <span>twitter.com/spc</span></a>
-        <a  href="http://www.facebook.com" class="link-icon"><span class="icon-facebook"></span> <span>facebook.com/spc</span></a>
-        <a  href="http://www.vimeo.com" class="link-icon"><span class="icon-vimeo"></span> <span>vimeo.com/spc</span></a>
-        <a  href="http://www.youtube.com" class="link-icon"><span class="icon-youtube-alt"></span> <span>youtube.com/spc</span></a>
+      <a href="mailto:info@simpsonperformanceconsulting.com" target="_blank" class="link-icon"><span class="icon-email-envelope"></span> <span>info@simpsonperformanceconsulting.com</span></a>
+        <a  href="tel:786-540-4772" target="_blank" class="link-icon"><span class="icon-mobile"></span><span>786-540-4SPC</span></a>
+        <a  href="http://www.twitter.com/SportPsychDunc" target="_blank" class="link-icon"><span class="icon-twitter"></span> <span>twitter.com/SportPsychDunc</span></a>
 
 </div>
 
   <h2>Pricing</h2>
 
-  <p>Pricing – each performance plan is individualized and based on your specific needs. We are committed to providing valuable services to our clients. </p>
+  <p>Pricing – each performance plan is individualized and based on your specific needs.</p><p>We are committed to providing valuable services to our clients. </p>
 
 <p><a href="#">Please contact SPC for pricing.</a></p>
 

@@ -41,6 +41,11 @@ $font-heavy: 'blissheavy', sans-serif;
   font-size: calculateRem($size);
 }
 
+@mixin line-height($size) {
+  line-height: $size;
+  line-height: calculateRem($size);
+}
+
 
 // media query simplicity -------------------------------------------------------
 /* example usage below

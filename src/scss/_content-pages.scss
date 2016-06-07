@@ -381,12 +381,16 @@ textarea:-ms-input-placeholder {
   .contacts{
     display:flex;
     flex-direction: column;
+    padding-bottom:30px;
     a{
       display:flex;
       flex-direction: row;
       padding:5px 0px;
       align-items:center;
       overflow: hidden;
+      @include bp-large {
+        @include font-size(20px);
+    }
       span:nth-child(1){
         margin-right:10px;
         margin-top: 4px;
